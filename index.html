@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Solar Photon Exploration</title>
+  <title>The Secret Life of a Photon</title>
   <style>
     body {
       margin: 0;
@@ -21,40 +21,33 @@
       margin: 0;
       font-size: 2.5rem;
     }
-    .hero {
-      position: relative;
-      text-align: center;
+    header p {
+      font-size: 1.1rem;
+      color: #bbbbbb;
     }
-    .hero-image {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      opacity: 0.8;
-    }
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 2rem;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 1rem 2rem;
-      border-radius: 8px;
-    }
-    .content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       padding: 2rem;
+      border-bottom: 1px solid #333;
     }
-    .text-section, .image-section {
-      background: #1f1f1f;
-      padding: 1.5rem;
+    .section:nth-child(even) { background: #181818; }
+    .section img {
+      max-width: 300px;
+      width: 100%;
       border-radius: 8px;
+      margin-right: 2rem;
     }
-    .image-section img {
-      max-width: 100%;
-      border-radius: 4px;
+    .section-content {
+      max-width: 600px;
+    }
+    .section h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+    .section p {
+      margin-bottom: 1rem;
     }
     footer {
       text-align: center;
@@ -62,34 +55,73 @@
       background: #1f1f1f;
       font-size: 0.9rem;
     }
-    @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      .hero-text { font-size: 1.5rem; }
+    @media (max-width: 800px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .section img { margin: 0 0 1rem; }
+      .section-content { max-width: 100%; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Solar Photon Exploration</h1>
+    <h1>The Secret Life of a Photon</h1>
+    <p>How a beam of light becomes the power in your home</p>
   </header>
-  <section class="hero">
-    <img src="https://source.unsplash.com/1600x400/?solar" alt="Solar image" class="hero-image">
-    <div class="hero-text">Unveiling the Power of Light</div>
-  </section>
-  <section class="content">
-    <div class="text-section">
-      <h2>What is a Photon</h2>
-      <p>A photon is a particle representing a quantum of light or other electromagnetic radiation. It has zero rest mass and travels at the speed of light.</p>
-      <h2>Solar Energy Conversion</h2>
-      <p>Photovoltaic cells convert photons into electrical energy by absorbing light and generating free electrons through the photoelectric effect.</p>
-    </div>
-    <div class="image-section">
-      <img src="https://source.unsplash.com/800x600/?solar-panel" alt="Solar panels">
-      <p>Photovoltaic cells harness solar photons to produce electricity.</p>
+
+  <section class="section">
+    <img src="images/sun.png" alt="Sun icon">
+    <div class="section-content">
+      <h2>🌞 Born in the Solar Core</h2>
+      <p>Meet Sunny the Photon! Deep in the Sun’s core, nuclear fusion releases immense energy. Photons bounce for thousands of years before emerging from the photosphere.</p>
+      <img src="images/photosphere.png" alt="Sun photosphere diagram">
+      <p>Once at the surface, Sunny escapes in just 8 minutes, traveling 150 million kilometers to Earth.</p>
     </div>
   </section>
+
+  <section class="section">
+    <img src="images/solar_panel.png" alt="Solar panel diagram">
+    <div class="section-content">
+      <h2>☀️ Hitting the Solar Panel</h2>
+      <p>Silicon wafers in solar cells absorb photons whose energy exceeds the silicon bandgap (1.1 eV). This excites electrons from the valence band to the conduction band.</p>
+      <p>These free electrons create a voltage across the p-n junction.</p>
+      <img src="images/electron_flow.png" alt="Electron flow diagram">
+    </div>
+  </section>
+
+  <section class="section">
+    <img src="images/inverter.png" alt="Inverter diagram">
+    <div class="section-content">
+      <h2>⚡ From DC to AC</h2>
+      <p>Solar panels output direct current (DC). Inverters use electronic switching to convert DC into alternating current (AC) matching grid frequency (60 Hz).</p>
+      <p>Modern microinverters optimize output per panel, improving efficiency in shaded or uneven conditions.</p>
+      <img src="images/grid_connection.png" alt="Grid connection diagram">
+      <p>Excess power flows to the grid, while shortages draw from either the grid or battery storage.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <img src="images/home_panel.png" alt="Home electrical panel">
+    <div class="section-content">
+      <h2>🔌 Connecting to Your Home</h2>
+      <p>AC power passes through your home’s electrical panel, distributing energy to outlets and lighting circuits.</p>
+      <p>Smart meters track production and consumption, enabling net metering arrangements.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <img src="images/led_bulb.png" alt="LED bulb">
+    <div class="section-content">
+      <h2>💡 Powering Daily Life</h2>
+      <p>From LED bulbs to appliances, billions of photons like Sunny illuminate work, study, and leisure.</p>
+      <p>Innovations in photovoltaic materials continue improving conversion rates, bringing us closer to sustainable energy futures.</p>
+    </div>
+  </section>
+
   <footer>
-    &copy; 2025 Solar Photon Exploration. Developed by Matteo.
+    &copy; 2025 The Secret Life of a Photon. Developed by Matteo.
   </footer>
 </body>
 </html>
